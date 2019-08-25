@@ -1,2 +1,1 @@
-＃ 你好你好
-#haha
+＃hello,this is a beat game,please experience~
