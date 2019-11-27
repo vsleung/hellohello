@@ -3,10 +3,10 @@ wb = openpyxl.Workbook()
 sheet = wb.active
 sheet.title = 'movie'
 
-sheet['A1'] ='序号'      #加表头，给A1单元格赋值
-sheet['B1'] ='电影名'    #加表头，给B1单元格赋值
-sheet['C1'] ='评分'      #加表头，给C1单元格赋值
-sheet['D1'] ='推荐语'    #加表头，给D1单元格赋值
+sheet['A1'] ='序号'      
+sheet['B1'] ='电影名'    
+sheet['C1'] ='评分'     
+sheet['D1'] ='推荐语'    
 sheet['E1'] ='链接'      #加表头，给E1单元格赋值
 
 for x in range(10):
@@ -29,4 +29,4 @@ for x in range(10):
             sheet.append([num, title, comment, None,url_movie])
             print(num + '.' + title + '——' + comment + '\n' +'\n' + url_movie)
 
-wb.save('movieTop250.xlsx') 
+wb.save('movieTop250.xlsx')
