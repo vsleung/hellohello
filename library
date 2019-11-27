@@ -1,4 +1,3 @@
- 
     def __init__(self, name, author, comment, state = 0):
         self.name = name
         self.author = author
