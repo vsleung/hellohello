@@ -1,0 +1,17 @@
+import requests,json
+
+word = input('你想翻译什么呀？')
+url='http://fanyi.youdao.com/translate?smartresult=dict&smartresult=rule'
+data={'i': word,
+      'from': 'AUTO',
+      'to': 'AUTO',
+      'smartresult': 'dict',
+      'client': 'fanyideskweb',
+      'doctype': 'json',
+      'version': '2.1',
+      'keyfrom': 'fanyi.web',
+      'action': 'FY_BY_REALTIME',
+      'typoResult': 'false'}
+r = requests.post(url,data)
+answer=json.loads(r.text)
+print ('翻译的结果是：'+answer['translateResult'][0][0]['tgt'])
